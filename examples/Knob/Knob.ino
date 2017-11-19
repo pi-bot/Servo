@@ -1,21 +1,18 @@
 /*
- Controlling a servo position using a potentiometer (variable resistor)
- by Michal Rinott <http://people.interaction-ivrea.it/m.rinott>
-
- modified on 8 Nov 2013
- by Scott Fitzgerald
- http://www.arduino.cc/en/Tutorial/Knob
+Modified from the official arduino example see:
+http://www.arduino.cc/en/Tutorial/Knob
+native servo connections on pin 5 or 6 the potentiometer is suggested to be connected 
 */
 
 #include <Servo.h>
 
 Servo myservo;  // create servo object to control a servo
 
-int potpin = 0;  // analog pin used to connect the potentiometer
+int potpin = A2;  // analog pin used to connect the potentiometer
 int val;    // variable to read the value from the analog pin
 
 void setup() {
-  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+  myservo.attach(5);  // attaches the servo on pin 5 to the servo object (6 is also available)
 }
 
 void loop() {
@@ -24,4 +21,3 @@ void loop() {
   myservo.write(val);                  // sets the servo position according to the scaled value
   delay(15);                           // waits for the servo to get there
 }
-
