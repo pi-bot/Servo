@@ -1,10 +1,7 @@
 /* Sweep
- by BARRAGAN <http://barraganstudio.com>
- This example code is in the public domain.
-
- modified 8 Nov 2013
- by Scott Fitzgerald
+From the arduino original see:
  http://www.arduino.cc/en/Tutorial/Sweep
+ The arduino pins for servo control are 5 and 6 on the piBot board.
 */
 
 #include <Servo.h>
@@ -15,7 +12,7 @@ Servo myservo;  // create servo object to control a servo
 int pos = 0;    // variable to store the servo position
 
 void setup() {
-  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+  myservo.attach(5);  // attaches the servo on pin 9 to the servo object
 }
 
 void loop() {
